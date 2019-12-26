@@ -1,0 +1,11 @@
+.nav-link {
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover, .active {
+  color: #fff;
+  background-color: #C82333;
+  border-radius: 0.3rem;
+}
