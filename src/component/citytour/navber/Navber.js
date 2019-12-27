@@ -2,6 +2,18 @@ import React, { Component } from "react";
 import "./navber.css";
 
 export default class Navber extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showNav: false
+    };
+  }
+  handleClkic = () => {
+    this.setState({
+      showNav: !this.state.showNav
+    });
+  };
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
@@ -12,37 +24,33 @@ export default class Navber extends Component {
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-           data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={this.handleClkic}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul className="navbar-nav m-auto mt-2 mt-lg-0">
+        <div className={this.state.showNav ? " " : "collapse navbar-collapse"}>
+          <ul className="navbar-nav m-auto ">
             <li className="nav-item ">
               <a
                 href="/"
-                className="nav-link text-white text-capitalize ml-5 active"
+                className="nav-link text-white text-capitalize ml-4 active"
               >
                 home <i className="fas fa-home" />
               </a>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link text-white text-capitalize ml-5">
+              <a href="/" className="nav-link text-white text-capitalize ml-4">
                 about us
               </a>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link text-white text-capitalize ml-5">
+              <a href="/" className="nav-link text-white text-capitalize ml-4">
                 contact us
               </a>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link text-white text-capitalize ml-5">
+              <a href="/" className="nav-link text-white text-capitalize ml-4">
                 photo gallery
               </a>
             </li>
