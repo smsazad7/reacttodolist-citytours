@@ -2,18 +2,7 @@ import React, { Component } from "react";
 import "./navber.css";
 
 export default class Navber extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showNav: false
-    };
-  }
-  handleClkic = () => {
-    this.setState({
-      showNav: !this.state.showNav
-    });
-  };
+ 
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
@@ -24,12 +13,16 @@ export default class Navber extends Component {
         <button
           className="navbar-toggler"
           type="button"
-          onClick={this.handleClkic}
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span ><i className="fas fa-bars" style={{color:"#fff"}}/></span>
         </button>
 
-        <div className={this.state.showNav ? " " : "collapse navbar-collapse"}>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto ">
             <li className="nav-item ">
               <a
