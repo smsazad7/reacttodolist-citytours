@@ -6,9 +6,8 @@ export default class Navber extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
-        <a className="navbar-brand text-white text-capitalize" href="#">
-          <i className="fas fa-dove" /> কাদির সরকার বাড়ী
-          <i className="fas fa-dove" />
+        <a className="navbar-brand text-white logo text-capitalize" href="#">
+          <i class="fab fa-asymmetrik"/>
         </a>
         <button
           className="navbar-toggler"
@@ -19,7 +18,9 @@ export default class Navber extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span ><i className="fas fa-bars" style={{color:"#fff"}}/></span>
+          <span>
+            <i className="fas fa-bars" style={{ color: "#fff" }} />
+          </span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">

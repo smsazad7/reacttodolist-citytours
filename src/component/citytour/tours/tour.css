@@ -1,0 +1,25 @@
+.new-top {
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  display: block;
+  top: 3%;
+  right: 5%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c82333;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+.new-top:hover .close-btn {
+  opacity: 1;
+}
+.card-title {
+  color: #c82333;
+
+  text-transform: capitalize;
+}
+.down {
+  color: #c82333;
+}

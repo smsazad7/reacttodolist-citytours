@@ -10,13 +10,18 @@ export default class TourList extends Component {
       newTour: tourData
     };
   }
-  handleRemove = id => {};
+  handleRemove = id => {
+    const filteItems=this.state.newTour.filter(item=>item.id !==id)
+    this.setState({
+      newTour:filteItems
+    })
+  };
   render() {
     return (
       <div className="container">
         <div className="row mt-2">
           {this.state.newTour.map(tour => (
-            <Tour key={tour.id} tour={tour} />
+            <Tour key={tour.id} tour={tour}handleRemove={this.handleRemove} />
           ))}
         </div>
       </div>
