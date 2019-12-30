@@ -7,7 +7,7 @@ export default class Navber extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
         <a className="navbar-brand text-white logo text-capitalize" href="#">
-          <i class="fab fa-asymmetrik"/>
+          <i className="fab fa-asymmetrik"/>
         </a>
         <button
           className="navbar-toggler"
