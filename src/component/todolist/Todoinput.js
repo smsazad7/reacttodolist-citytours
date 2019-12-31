@@ -25,8 +25,8 @@ export default class Todoinput extends Component {
             disabled={item?false:true}
               className={
                 editItem
-                  ? "btn btn-block btn-success text-capitalize my-3"
-                  : "btn btn-block btn-primary text-capitalize my-3"
+                  ? "btn btn-block btn-success text-capitalize mt-3"
+                  : "btn btn-block btn-primary text-capitalize mt-3"
               }
             >
               {editItem?"edit item":"add item"}
